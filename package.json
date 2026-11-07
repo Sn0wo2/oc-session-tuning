@@ -1,0 +1,41 @@
+{
+  "name": "oc-session-tuning",
+  "version": "0.0.0",
+  "description": "Run OpenCode V2 compaction, goal review, and side questions with independent models and prompts",
+  "keywords": [
+    "opencode",
+    "opencode2",
+    "opencode-plugin",
+    "opencode2-plugin"
+  ],
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Me0wo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sn0wo2/oc-session-tuning.git"
+  },
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "lint": "biome check --error-on-warnings .",
+    "lint:fix": "biome check --write --error-on-warnings .",
+    "ci": "bun run lint && bun run check"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.2.5",
+    "@opencode/schema": "2.2.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.6",
+    "@types/bun": "^1.4.4",
+    "typescript": "^7.0.2"
+  }
+}
